@@ -1,7 +1,7 @@
 # Calculadora de Magnitudes Físicas
 
 ## Información del Estudiante
-- **Nombre completo:** Carlos Ochoa
+- **Nombre completo:** Carlos José Ochoa Arévalo
 - **Programa:** Ingeniería de Software
 - **Materia:** Construcción de Algoritmos
 
