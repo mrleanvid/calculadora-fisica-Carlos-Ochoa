@@ -1,7 +1,7 @@
 # Calculadora de Magnitudes Físicas
 
 ## Información del Estudiante
-- **Nombre completo:** Tu Nombre Completo
+- **Nombre completo:** Carlos Ochoa
 - **Programa:** Ingeniería de Software
 - **Materia:** Construcción de Algoritmos
 
