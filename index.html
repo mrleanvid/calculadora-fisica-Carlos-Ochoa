@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Magnitudes Físicas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>⚡ Calculadora de Magnitudes Físicas</h1>
+                <p class="student-name">Estudiante: <span id="nombre-estudiante">Tu Nombre Completo</span></p>
+                <p class="subject-info">Construcción de Algoritmos · Ingeniería de Software</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- TARJETA 1: VELOCIDAD -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">01</span>
+                <div>
+                    <h2>Velocidad</h2>
+                    <p class="formula">v = d / t</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Distancia (d) en metros:</label>
+                    <input type="number" id="vel-d" placeholder="Ej: 100" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Tiempo (t) en segundos:</label>
+                    <input type="number" id="vel-t" placeholder="Ej: 10" step="any">
+                </div>
+                <button onclick="calcularVelocidad()">Calcular</button>
+                <div class="result" id="res-velocidad"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA 2: ACELERACIÓN -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">02</span>
+                <div>
+                    <h2>Aceleración</h2>
+                    <p class="formula">a = Δv / Δt</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Velocidad final (vf) en m/s:</label>
+                    <input type="number" id="acel-vf" placeholder="Ej: 30" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Velocidad inicial (vi) en m/s:</label>
+                    <input type="number" id="acel-vi" placeholder="Ej: 10" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Tiempo (Δt) en segundos:</label>
+                    <input type="number" id="acel-t" placeholder="Ej: 5" step="any">
+                </div>
+                <button onclick="calcularAceleracion()">Calcular</button>
+                <div class="result" id="res-aceleracion"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA 3: FUERZA -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">03</span>
+                <div>
+                    <h2>Fuerza</h2>
+                    <p class="formula">F = m · a</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Masa (m) en kilogramos:</label>
+                    <input type="number" id="fuerza-m" placeholder="Ej: 70" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Aceleración (a) en m/s²:</label>
+                    <input type="number" id="fuerza-a" placeholder="Ej: 9.8" step="any">
+                </div>
+                <button onclick="calcularFuerza()">Calcular</button>
+                <div class="result" id="res-fuerza"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA 4: TRABAJO -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">04</span>
+                <div>
+                    <h2>Trabajo</h2>
+                    <p class="formula">W = F · d · cos(θ)</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Fuerza (F) en Newtons:</label>
+                    <input type="number" id="trab-f" placeholder="Ej: 50" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Distancia (d) en metros:</label>
+                    <input type="number" id="trab-d" placeholder="Ej: 10" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Ángulo (θ) en grados:</label>
+                    <input type="number" id="trab-ang" placeholder="Ej: 0" step="any">
+                </div>
+                <button onclick="calcularTrabajo()">Calcular</button>
+                <div class="result" id="res-trabajo"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA 5: ENERGÍA CINÉTICA -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">05</span>
+                <div>
+                    <h2>Energía Cinética</h2>
+                    <p class="formula">K = ½ · m · v²</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Masa (m) en kilogramos:</label>
+                    <input type="number" id="ec-m" placeholder="Ej: 10" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Velocidad (v) en m/s:</label>
+                    <input type="number" id="ec-v" placeholder="Ej: 20" step="any">
+                </div>
+                <button onclick="calcularECinetica()">Calcular</button>
+                <div class="result" id="res-ecinetica"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA 6: ENERGÍA POTENCIAL GRAVITATORIA -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">06</span>
+                <div>
+                    <h2>Energía Potencial Gravitatoria</h2>
+                    <p class="formula">U = m · g · h</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Masa (m) en kilogramos:</label>
+                    <input type="number" id="ep-m" placeholder="Ej: 5" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Gravedad (g) en m/s² <span class="hint">(estándar: 9.8)</span>:</label>
+                    <input type="number" id="ep-g" placeholder="9.8" step="any" value="9.8">
+                </div>
+                <div class="input-group">
+                    <label>Altura (h) en metros:</label>
+                    <input type="number" id="ep-h" placeholder="Ej: 15" step="any">
+                </div>
+                <button onclick="calcularEPotencial()">Calcular</button>
+                <div class="result" id="res-epotencial"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA 7: DENSIDAD -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">07</span>
+                <div>
+                    <h2>Densidad</h2>
+                    <p class="formula">ρ = m / V</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Masa (m) en kilogramos:</label>
+                    <input type="number" id="den-m" placeholder="Ej: 200" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Volumen (V) en m³:</label>
+                    <input type="number" id="den-v" placeholder="Ej: 0.5" step="any">
+                </div>
+                <button onclick="calcularDensidad()">Calcular</button>
+                <div class="result" id="res-densidad"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA 8: PRESIÓN -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">08</span>
+                <div>
+                    <h2>Presión</h2>
+                    <p class="formula">P = F / A</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Fuerza (F) en Newtons:</label>
+                    <input type="number" id="pre-f" placeholder="Ej: 100" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Área (A) en m²:</label>
+                    <input type="number" id="pre-a" placeholder="Ej: 2" step="any">
+                </div>
+                <button onclick="calcularPresion()">Calcular</button>
+                <div class="result" id="res-presion"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA 9: CARGA ELÉCTRICA -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">09</span>
+                <div>
+                    <h2>Carga Eléctrica</h2>
+                    <p class="formula">q = I · t</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Corriente (I) en Amperios:</label>
+                    <input type="number" id="car-i" placeholder="Ej: 3" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Tiempo (t) en segundos:</label>
+                    <input type="number" id="car-t" placeholder="Ej: 60" step="any">
+                </div>
+                <button onclick="calcularCargaElectrica()">Calcular</button>
+                <div class="result" id="res-carga"></div>
+            </div>
+        </div>
+
+        <!-- TARJETA 10: LEY DE OHM -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-number">10</span>
+                <div>
+                    <h2>Ley de Ohm</h2>
+                    <p class="formula">V = I · R</p>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="input-group">
+                    <label>Corriente (I) en Amperios:</label>
+                    <input type="number" id="ohm-i" placeholder="Ej: 2" step="any">
+                </div>
+                <div class="input-group">
+                    <label>Resistencia (R) en Ohmios (Ω):</label>
+                    <input type="number" id="ohm-r" placeholder="Ej: 10" step="any">
+                </div>
+                <button onclick="calcularOhm()">Calcular</button>
+                <div class="result" id="res-ohm"></div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>Calculadora de Magnitudes Físicas · Construcción de Algoritmos · Ingeniería de Software</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
