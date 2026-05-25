@@ -42,9 +42,9 @@ calculadora-fisica-nombre-apellido/
 
 ## Instrucciones para Ejecutar
 
-1. Clona o descarga este repositorio:
+1. Copie este link y péguelo en su navegador
    ```
-   git clone https://github.com/tu-usuario/calculadora-fisica-nombre-apellido.git
+   https://mrleanvid.github.io/calculadora-fisica-Carlos-Ochoa/
    ```
 
 2. Abre la carpeta del proyecto.
