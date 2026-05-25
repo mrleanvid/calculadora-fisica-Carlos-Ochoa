@@ -47,13 +47,6 @@ calculadora-fisica-nombre-apellido/
    https://mrleanvid.github.io/calculadora-fisica-Carlos-Ochoa/
    ```
 
-2. Abre la carpeta del proyecto.
-
-3. Haz doble clic en el archivo **`index.html`** para abrirlo en tu navegador web.
-
-4. ¡No requiere instalación ni servidor adicional!
-
----
 
 ## Tecnologías Utilizadas
 
